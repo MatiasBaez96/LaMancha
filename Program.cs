@@ -55,7 +55,6 @@ namespace LaMancha
             theDirector.Direct();
 
             audioService.StopAudio();
-            //Hola Jojo 
         }
     }
 }
