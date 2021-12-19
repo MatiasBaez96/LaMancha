@@ -47,7 +47,7 @@ namespace LaMancha
             // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
 
             // Start up the game
-            outputService.OpenWindow(Constants.MAX_X, Constants.MAX_Y, "Batter", Constants.FRAME_RATE);
+            outputService.OpenWindow(Constants.MAX_X, Constants.MAX_Y, "La Mancha", Constants.FRAME_RATE);
             audioService.StartAudio();
             audioService.PlaySound(Constants.SOUND_START);
 
