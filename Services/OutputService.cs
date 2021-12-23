@@ -66,9 +66,20 @@ namespace LaMancha.Services
         /// <param name="y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        public void DrawBox(int x, int y, int width, int height)
+        public void DrawBox(int x, int y, int width, int height, string name)
         {
-            Raylib.DrawRectangle(x, y, width, height, Raylib_cs.Color.DARKGREEN);            
+            if (name == "player1")
+            {
+                Raylib.DrawRectangle(x, y, width, height, Raylib_cs.Color.DARKGREEN);
+            }
+            else if (name == "player2")
+            {
+                Raylib.DrawRectangle(x, y, width, height, Raylib_cs.Color.RED);
+            }
+            else 
+            {
+                Raylib.DrawRectangle(x, y, width, height, Raylib_cs.Color.BROWN);
+            }
         }
 
         /// <summary>
@@ -122,6 +133,7 @@ namespace LaMancha.Services
             int y = actor.GetY();
             int width = actor.GetWidth();
             int height = actor.GetHeight();
+            string playerName = actor.getName();
 
 
             if (actor.HasImage())
@@ -137,7 +149,7 @@ namespace LaMancha.Services
             }
             else
             {
-                DrawBox(x, y, width, height);
+                DrawBox(x, y, width, height, playerName);
             }
         }
 

@@ -13,6 +13,7 @@ namespace LaMancha.Casting //Nombre proyecto/Ubicacion Clase
 
         protected string _text = "";
         private string _image = "";
+        protected string _name = "";
 
         public Actor()
         {
@@ -87,6 +88,14 @@ namespace LaMancha.Casting //Nombre proyecto/Ubicacion Clase
             return _position.GetY() + _height;
         }
 
+        public void setName(string name)
+        {
+            _name = name;
+        }
+        public string getName()
+        {
+            return _name;
+        }
         public int GetWidth()
         {
             return _width;

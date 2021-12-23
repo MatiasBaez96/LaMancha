@@ -17,13 +17,15 @@ namespace LaMancha
 
             // Bricks
             cast["player"] = new List<Actor>();
-            Player player1 = new Player(Constants.PLAYER_HEIGHT, Constants.PLAYER_WIDTH, Constants.PLAYER_X, Constants.PLAYER_Y);
+            Player player1 = new Player(Constants.PLAYER_HEIGHT, Constants.PLAYER_WIDTH, Constants.PLAYER_X, Constants.PLAYER_Y, "player1");
             cast["player"].Add(player1);
 
             // TODO: Add your bricks here
 
             // The Ball (or balls if desired)
             cast["player2"] = new List<Actor>();
+            Player player2 = new Player(Constants.PLAYER_HEIGHT, Constants.PLAYER_WIDTH, Constants.PLAYER_X + 1000, Constants.PLAYER_Y, "player2");
+            cast["player2"].Add(player2);
 
             // TODO: Add your ball here
 
