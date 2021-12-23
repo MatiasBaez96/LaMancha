@@ -24,7 +24,7 @@ namespace LaMancha
 
             // The Ball (or balls if desired)
             cast["player2"] = new List<Actor>();
-            Player player2 = new Player(Constants.PLAYER_HEIGHT, Constants.PLAYER_WIDTH, Constants.PLAYER_X + 1000, Constants.PLAYER_Y, "player2");
+            Player player2 = new Player(Constants.PLAYER_HEIGHT, Constants.PLAYER_WIDTH, 1425, Constants.PLAYER_Y, "player2");
             cast["player2"].Add(player2);
 
             // TODO: Add your ball here
