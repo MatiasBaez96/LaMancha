@@ -50,6 +50,9 @@ namespace LaMancha
             MoveActorsAction moveActorsAction = new MoveActorsAction();
             script["update"].Add(moveActorsAction);
 
+            ControlActorsAction controlActorsAction = new ControlActorsAction(inputService);
+            script["update"].Add(controlActorsAction);
+
             // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
 
             // Start up the game

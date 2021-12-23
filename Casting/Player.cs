@@ -9,7 +9,7 @@ namespace LaMancha.Casting
             _width = width;
 
             _position = new Point(x, y);
-            _velocity = new Point(1,-1);
+            _velocity = new Point(0,0);
         }
     }
 }
