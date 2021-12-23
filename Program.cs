@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LaMancha.Services;
 using LaMancha.Casting;
 using LaMancha.Scripting;
+using Raylib_cs;
 
 
 namespace LaMancha
@@ -15,7 +16,9 @@ namespace LaMancha
             Dictionary<string, List<Actor>> cast = new Dictionary<string, List<Actor>>();
 
             // Bricks
-            cast["player1"] = new List<Actor>();
+            cast["player"] = new List<Actor>();
+            Player player1 = new Player(Constants.PLAYER_HEIGHT, Constants.PLAYER_WIDTH, Constants.PLAYER_X, Constants.PLAYER_Y);
+            cast["player"].Add(player1);
 
             // TODO: Add your bricks here
 
@@ -44,6 +47,9 @@ namespace LaMancha
             DrawActorsAction drawActorsAction = new DrawActorsAction(outputService);
             script["output"].Add(drawActorsAction);
 
+            MoveActorsAction moveActorsAction = new MoveActorsAction();
+            script["update"].Add(moveActorsAction);
+
             // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
 
             // Start up the game
@@ -56,5 +62,6 @@ namespace LaMancha
 
             audioService.StopAudio();
         }
+        
     }
 }
