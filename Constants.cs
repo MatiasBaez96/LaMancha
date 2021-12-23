@@ -40,7 +40,7 @@ namespace LaMancha
 
         
 
-        public const int PADDLE_SPEED = 15;
+        public const int PLAYER_SPEED = 15;
 
         public const int PADDLE_WIDTH = 96;
         public const int PADDLE_HEIGHT = 24;

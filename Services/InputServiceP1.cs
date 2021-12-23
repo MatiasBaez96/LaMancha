@@ -8,29 +8,29 @@ namespace LaMancha.Services
     /// <summary>
     /// Handles all the interaction with the user input library.
     /// </summary>
-    public class InputService
+    public class InputServiceP1
     {
-        public InputService()
+        public InputServiceP1()
         {
 
         }
 
         public bool IsLeftPressed()
         {
-            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_LEFT);
+            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_A);
         }
 
         public bool IsRightPressed()
         {
-            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_RIGHT);
+            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_D);
         }
         public bool IsUpPressed()
         {
-            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_UP);
+            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_W);
         }
         public bool IsDownPressed()
         {
-            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_DOWN);
+            return Raylib.IsKeyDown(Raylib_cs.KeyboardKey.KEY_S);
         }
 
         /// <summary>

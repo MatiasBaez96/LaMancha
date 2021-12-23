@@ -38,7 +38,8 @@ namespace LaMancha
             Dictionary<string, List<Action>> script = new Dictionary<string, List<Action>>();
 
             OutputService outputService = new OutputService();
-            InputService inputService = new InputService();
+            InputServiceP1 inputServiceP1 = new InputServiceP1();
+            InputServiceP2 inputServiceP2 = new InputServiceP2();
             PhysicsService physicsService = new PhysicsService();
             AudioService audioService = new AudioService();
 
@@ -52,9 +53,11 @@ namespace LaMancha
             MoveActorsAction moveActorsAction = new MoveActorsAction();
             script["update"].Add(moveActorsAction);
 
-            ControlActorsAction controlActorsAction = new ControlActorsAction(inputService);
-            script["update"].Add(controlActorsAction);
+            ControlActorsActionP1 controlActorsActionP1 = new ControlActorsActionP1(inputServiceP1);
+            script["input"].Add(controlActorsActionP1);
 
+            ControlActorsActionP2 controlActorsActionP2 = new ControlActorsActionP2(inputServiceP2);
+            script["input"].Add(controlActorsActionP2);
             // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
 
             // Start up the game

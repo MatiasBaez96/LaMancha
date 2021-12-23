@@ -7,23 +7,23 @@ namespace LaMancha.Scripting
     /// <summary>
     /// An action to control the horizontal direction of the hero.
     /// </summary>
-    public class ControlActorsAction : Action
+    public class ControlActorsActionP1 : Action
     {
-        InputService _inputService;
+        InputServiceP1 _inputServiceP1;
 
-        public ControlActorsAction(InputService inputService)
+        public ControlActorsActionP1(InputServiceP1 inputServiceP1)
         {
-            _inputService = inputService;
+            _inputServiceP1 = inputServiceP1;
         }
 
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
-            Point direction = _inputService.GetDirection();
+            Point directionP1 = _inputServiceP1.GetDirection();
             
             Actor player1 = cast["player"][0];
 
-            Point velocity = direction.Scale(Constants.PADDLE_SPEED);
-            player1.SetVelocity(velocity);
+            Point velocityP1 = directionP1.Scale(Constants.PLAYER_SPEED);
+            player1.SetVelocity(velocityP1);
         }
     }
 }
