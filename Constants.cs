@@ -1,4 +1,5 @@
 using System;
+using Raylib_cs;
 
 namespace LaMancha
 {
@@ -7,7 +8,7 @@ namespace LaMancha
     /// </summary>
     public static class Constants
     {
-        public const int MAX_X = 1500;
+        public const int MAX_X = 1900;
         public const int MAX_Y = 900;
         public const int FRAME_RATE = 30;
 
@@ -23,8 +24,8 @@ namespace LaMancha
         public const string SOUND_BOUNCE = "./Assets/boing.wav";
         public const string SOUND_OVER = "./Assets/over.wav";
 
-        public const int BALL_X = MAX_X / 2;
-        public const int BALL_Y = MAX_Y - 125;
+        public const int PLAYER_X = MAX_X / 4;
+        public const int PLAYER_Y = MAX_Y - 125;
 
         public const int BALL_DX = 8;
         public const int BALL_DY = BALL_DX * -1;
@@ -32,10 +33,12 @@ namespace LaMancha
         public const int PADDLE_X = MAX_X / 2;
         public const int PADDLE_Y = MAX_Y - 25;
 
-        public const int BRICK_WIDTH = 48;
-        public const int BRICK_HEIGHT = 24;
+        public const int PLAYER_WIDTH = 24;
+        public const int PLAYER_HEIGHT = 24;
 
         public const int BRICK_SPACE = 5;
+
+        
 
         public const int PADDLE_SPEED = 15;
 
