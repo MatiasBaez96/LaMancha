@@ -10,8 +10,6 @@ namespace LaMancha.Scripting
     public class ControlActorsAction : Action
     {
         InputService _inputService;
-        PhysicsService _physicsService;
-
 
         public ControlActorsAction(InputService inputService)
         {
