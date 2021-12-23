@@ -1,4 +1,4 @@
-namespace LaMancha.Casting
+namespace LaMancha.Casting //Nombre proyecto/Ubicacion Clase 
 {
     /// <summary>
     /// Base class for all actors in the game.
@@ -34,17 +34,17 @@ namespace LaMancha.Casting
 
         public bool HasImage()
         {
-            return _image != "";
+            return _image != ""; //(Sintaxis)???
         }
 
         public bool HasText()
         {
-            return _text != "";
+            return _text != ""; //???
         }
 
         public bool HasBox()
         {
-            return _width > 0 && _height > 0;
+            return _width > 0 && _height > 0; //???
         }
 
         public string GetText()

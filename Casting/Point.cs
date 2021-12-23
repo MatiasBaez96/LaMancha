@@ -72,7 +72,7 @@ namespace LaMancha.Casting
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            return obj is Point point &&
+            return obj is Point point &&   //???
                    _x == point._x &&
                    _y == point._y;
         }

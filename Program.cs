@@ -41,7 +41,7 @@ namespace LaMancha
             script["input"] = new List<Action>();
             script["update"] = new List<Action>();
 
-            DrawActorsAction drawActorsAction = new DrawActorsAction(outputService);
+            DrawActorsAction drawActorsAction = new DrawActorsAction(outputService); //conector que recibe un "objeto del tipo OutputSerivice"
             script["output"].Add(drawActorsAction);
 
             // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.

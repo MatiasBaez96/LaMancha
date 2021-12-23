@@ -39,7 +39,7 @@ namespace LaMancha.Services
             Raylib_cs.Rectangle rectangle2
                 = new Raylib_cs.Rectangle(x2, y2, width2, height2);
 
-            return Raylib.CheckCollisionRecs(rectangle1, rectangle2);
+            return Raylib.CheckCollisionRecs(rectangle1, rectangle2); //Colisiones entre jugadores 
         }
     }
 
