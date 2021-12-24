@@ -1,2 +1,3 @@
 # LaMancha-
-Juego Matias Josue 
+Programa de practica.
+Creamos un juego de dos usuaios. 
