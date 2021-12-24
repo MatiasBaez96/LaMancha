@@ -25,6 +25,11 @@ namespace LaMancha.Scripting
             Point vel = player2.GetVelocity();
             int y = vel.GetY();
             player2.SetVelocity(new Point(directionP2, y));
+            if (_inputServiceP2.IsUpPressed())
+            {
+                player2.Jump();
+            }
+            player2.ActivateGravity();
         }
     }
 }

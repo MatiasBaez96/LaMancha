@@ -27,6 +27,11 @@ namespace LaMancha.Scripting
             player1.SetVelocity(new Point(directionP1, y));
             // Point velocityP1 = directionP1.Scale(Constants.PLAYER_SPEED);
             // player1.SetVelocity(velocityP1);
+            if (_inputServiceP1.IsUpPressed())
+            {
+                player1.Jump();
+            }
+            player1.ActivateGravity();
         }
     }
 }
