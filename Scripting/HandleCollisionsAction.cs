@@ -35,7 +35,6 @@ namespace LaMancha.Scripting
                 
                 if (_physicsService.IsCollision(player1, platform))
                 {
-                    Console.WriteLine("P1");
                     player1.StopGravity();
                 }
             }
