@@ -12,12 +12,12 @@ namespace LaMancha.Casting
 
             _position = new Point(x, 400);
             _velocity = new Point(0,9);
-            bool canJump = true;
+            // bool canJump = true;
         }
 
-        public int gravity()
+        public void StopGravity()
         {
-            return 9;
+            _velocity = new Point(0,0);
         }
 
 

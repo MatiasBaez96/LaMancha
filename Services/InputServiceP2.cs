@@ -37,32 +37,32 @@ namespace LaMancha.Services
         /// Gets the direction asked for by the current key presses
         /// </summary>
         /// <returns></returns>
-        public Point GetDirection()
+        public int GetDirection()
         {
             int x = 0;
-            int y = 0;
+            //int y = 0;
 
             if (IsLeftPressed())
             {
-                x = -1;
+                x = -Constants.PLAYER_SPEED;
             }
 
             if (IsRightPressed())
             {
-                x = 1;
+                x = Constants.PLAYER_SPEED;
             }
             
-            if (IsUpPressed())
-            {
-                y = -1;
-            }
+            // if (IsUpPressed())
+            // {
+            //     y = -1;
+            // }
             
-            if (IsDownPressed())
-            {
-                y = 1;
-            }
+            // if (IsDownPressed())
+            // {
+            //     y = 1;
+            // }
             
-            return new Point(x, y);
+            return x;
         }
 
         /// <summary>
