@@ -30,7 +30,9 @@ namespace LaMancha
             // TODO: Add your ball here
 
             // The paddle
-            cast["platfrm"] = new List<Actor>();
+            cast["platform"] = new List<Actor>();
+            Platform platform = new Platform();
+            cast["platform"].Add(platform);
 
             // TODO: Add your paddle here
 
@@ -58,6 +60,9 @@ namespace LaMancha
 
             ControlActorsActionP2 controlActorsActionP2 = new ControlActorsActionP2(inputServiceP2);
             script["input"].Add(controlActorsActionP2);
+
+            HandleCollisionsAction handleCollisionsAction = new HandleCollisionsAction(physicsService);
+            script["output"].Add(handleCollisionsAction);
             // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
 
             // Start up the game

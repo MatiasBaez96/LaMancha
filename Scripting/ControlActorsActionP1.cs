@@ -18,12 +18,15 @@ namespace LaMancha.Scripting
 
         public override void Execute(Dictionary<string, List<Actor>> cast)
         {
-            Point directionP1 = _inputServiceP1.GetDirection();
+            int directionP1 = _inputServiceP1.GetDirection();
             
-            Actor player1 = cast["player"][0];
-
-            Point velocityP1 = directionP1.Scale(Constants.PLAYER_SPEED);
-            player1.SetVelocity(velocityP1);
+            Actor player = cast["player"][0];
+            Player player1 = (Player)player;
+            Point vel = player1.GetVelocity();
+            int y = vel.GetY();
+            player1.SetVelocity(new Point(directionP1, y));
+            // Point velocityP1 = directionP1.Scale(Constants.PLAYER_SPEED);
+            // player1.SetVelocity(velocityP1);
         }
     }
 }

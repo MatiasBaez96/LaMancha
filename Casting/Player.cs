@@ -10,8 +10,16 @@ namespace LaMancha.Casting
             _width = width;
             _name = playerName;
 
-            _position = new Point(x, y);
-            _velocity = new Point(0,0);
+            _position = new Point(x, 400);
+            _velocity = new Point(0,9);
+            bool canJump = true;
         }
+
+        public int gravity()
+        {
+            return 9;
+        }
+
+
     }
 }
