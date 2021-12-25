@@ -31,9 +31,12 @@ namespace LaMancha
 
             // The paddle
             cast["platform"] = new List<Actor>();
-            Platform platform = new Platform();
-            cast["platform"].Add(platform);
-
+            Platform floor = new Platform(24, Constants.MAX_X, new Point(0,Constants.MAX_Y - 100));
+            cast["platform"].Add(floor);
+            Platform center = new Platform(24, 150, new Point(Constants.MAX_X / 2,630));
+            cast["platform"].Add(center);
+            Platform rightSide = new Platform(24, 150, new Point(Constants.MAX_X - 150,630));
+            cast["platform"].Add(rightSide);
             // TODO: Add your paddle here
 
             // Create the script
@@ -62,9 +65,8 @@ namespace LaMancha
             script["input"].Add(controlActorsActionP2);
 
             HandleCollisionsAction handleCollisionsAction = new HandleCollisionsAction(physicsService);
-            script["output"].Add(handleCollisionsAction);
-            // TODO: Add additional actions here to handle the input, move the actors, handle collisions, etc.
-
+            script["update"].Add(handleCollisionsAction);
+            
             // Start up the game
             outputService.OpenWindow(Constants.MAX_X, Constants.MAX_Y, "La Mancha", Constants.FRAME_RATE);
             audioService.StartAudio();

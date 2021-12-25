@@ -2,12 +2,12 @@ namespace LaMancha.Casting
 {
     public class Platform : Actor
     {
-        public Platform()
+        public Platform(int height, int width, Point position)
         {
-            _height = 24;
-            _width = Constants.MAX_X;
+            _height = height;
+            _width = width;
             
-            _position = new Point(0, Constants.MAX_Y - 100);
+            _position = position;
             _velocity = new Point(0,0);
         }
     }

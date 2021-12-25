@@ -29,7 +29,7 @@ namespace LaMancha.Scripting
             {
                 player1.Jump();
             }
-            player1.ActivateGravity();
+            player1.ActivateGravityAfterJump();
         }
     }
 }

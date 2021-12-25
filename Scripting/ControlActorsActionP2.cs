@@ -29,7 +29,7 @@ namespace LaMancha.Scripting
             {
                 player2.Jump();
             }
-            player2.ActivateGravity();
+            player2.ActivateGravityAfterJump();
         }
     }
 }

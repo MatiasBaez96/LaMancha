@@ -27,12 +27,16 @@ namespace LaMancha.Casting
             _lastJump = GetY();
         }
 
-    public void ActivateGravity()
-    {
-        if (GetY() <= _lastJump - 190)
+        public void ActivateGravityAfterJump()
         {
-           _velocity = new Point(0,9);
+            if (GetY() <= _lastJump - 190)
+            {
+            _velocity = new Point(0,9);
+            }
         }
-    }
+        public void ActivateGravity()
+        {
+            _velocity = new Point(0,9);
+        }
     }
 }
